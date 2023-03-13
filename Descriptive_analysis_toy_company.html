@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Descriptive analysis of a collectible toys company</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Portfolio</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home Page</a></li>
+							<li class="active"><a href="Superstore_profit_sales.html">Current Project</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://github.com/medinalautaro/" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Descriptive analysis of a collectible toys company</h1>
+									<p>Using Excel for data cleanup, analysis, and finally 3 automated dashboards that update as new information<br />
+										 is added to the database showcasing the company's situation.<br />
+								</header>
+								<div class="image main"><img src="Recursos\Descriptive_analysis_toy_company\Excel_Dashboard_1.png" alt="" /></div>
+								<h2>Summary:</h2>
+								<p>The objective of this project was to create a series of dashboards that update automatically showing the current status of the company sales and products that could benefit the company's decision-makers in their duties. I created 3 dashboards: "General Sales Data and Product types", "World, Territory, and Clients", and "Product Code". Finally, I give my thoughts on the business's current situation and a couple of recommendations. If you want a quick view of this project you can just look at the 3 dashboards and the final thoughts at the end, if you want to see the dashboards' interactivity please ask me about this project.</p>
+								<h2>Data:</h2>
+								<p>The data used is a sample dataset intended for analysis and demonstration purposes. Link to the dataset: <a href="https://www.kaggle.com/datasets/kyanyoga/sample-sales-data">link</a>.</p>
+								<h2>Data characteristics:</h2>
+								<p>The data it's about a Collectible Toy Company, and it does not have any cost column present for production, investment, or marketing. Given these conditions, I will be doing a descriptive analysis for the most part, only giving recommendations for further investigation when 
+									appropriate. </p>
+								<h1>This is a picture of the original data, which has 2824 rows:</h1>
+								<div class="image main"><img src="Recursos\Descriptive_analysis_toy_company\Data_pic.png" alt="" /></div>
+								<h2>Data cleanup:</h2>
+								<p>The data cleanup followed the following steps:</p>
+								<ul>
+									<li>Format the data as a table.</li>
+									<li>Delete all rows that are not useful for the analysis.</li>
+									<li>Check in the filters tab for each column for missing or strange values.</li>
+								</ul>	
+								<p>At that point is where I discovered that the price of some units was wrong. The total-sales was always a specific value, and it changed according to the number of units sold and the price, but the price never went above 100. Since the sales was always accurate for any price below 100, and all values were very specific for the number of units sold and sales, I decided to change the unit price to Sales/unitsSold. With that change, every row with a price below 100 remained the same and most units with a price above 100 changed, confirming my theory.</p>
+								<p>After applying those changes, I solved one of the main problems in this data cleanup, the dates were in a totally wrong format, and any wrong chance would end up switching months and day in the rows with a day below 12. Using back-ups and ctrl-z when appropriate I fixed the date to the correct format, thus avoiding day-month interchanges.</p>
+								<p>Finally, the data clean-up ended up in the following order.</p>
+								<ul>
+									<li>Format the data as a table.</li>
+									<li>Delete all rows that are not useful for the analysis.</li>
+									<li>Check in the filters tab for each column for missing or strange values.</li>
+									<li>Change the price column to accurately show its values.</li>
+									<li>Change the date format to accurately show the dates.</li>
+								</ul>
+								<h2>Data analysis:</h2>
+								<p>For the data analysis, I created multiple pivot tables, since my intention was that the document could be updated with any amount of data added I created a separate tab for each pivot table to avoid overlapping.</p>
+								<p>Each of the following dashboards is fully automatic, except for the titles "General Sales Data and Product types", "World, Territory, and Clients", and "Product Code", everything is automatic and responsive.</p>
+								<h3>General Sales Data and Product types:</h3>
+								<p>At the top of the dashboard, we can see the quarter we are in, the sales difference with the previous quarter, and the accumulated difference with the previous year up to now.</p>
+								<p>Next, we can see on the left part of the dashboard there are two line charts, showing sales over time by quarter and quantity sold over time by quarter. These charts are important to quickly figure out, that the sales over time did not change to a higher quantity sold at a lower price nor a lower quantity 
+									at a higher price or any change of equivalent nature, this is to say that an increase in sales is accompanied by an equal or almost equal increase in quantity sold and the same goes for a decrease in sales or quantity sold.</p>
+								<p>On the right side of the dashboard, I used two graphs to show the situation in each of the product types or product lines. Here we can clearly see that the classic cars and the vintage cars remain constantly the best sellers across all the time shown in the data. For the trains product type, we can see the opposite situation, raising the concern if this amount of sales and the presence of one of our products of this type in the market are worth the cost of marketing and production, this is one of the questions that would require further analysis with data that I don't have available.</p>	
+								<div class="image main"><img src="Recursos\Descriptive_analysis_toy_company\Excel_Dashboard_1.png" alt="" /></div>
+								<h3>World, Territory, and Clients:</h3>
+								<p>At the top of this dashboard, we can see the top country by sales next to our top client in the world.</p>
+								<p>In the middle there are 3 main graphs that show data for all our territories, first, there is a line chart showing sales overtime for each territory clearly showing that the top territories are EMEA and NA. Next, there is a bar chart showing all countries and their participation rate for our total sales, this shows that the US is the main country regarding sales by far making it a very important focal point for the business. Lastly in the middle section are our top 10 clients in the world and their total sales, this is crucial information for future deals, contracts, and connection points to keep expanding in each territory as well as our total sales. 
+								</p>
+								<p>Finally, at the bottom, we can see more specific data for the territory that we select, the bar chart and the pie chart combined help us to figure out the importance of each of our clients in each territory, showing us how close we are to have a situation that is too close to a monopsony which could be 
+									detrimental to our future contracts, relationship, and expansion.</p>
+								<div class="image main"><img src="Recursos\Descriptive_analysis_toy_company\Excel_Dashboard_2.png" alt="" /></div>
+								<h3>Product Code:</h3>
+								<p>At the top, we can see the highest sold product, in this case, 118, and the total sales for it.</p>
+								<p>In the middle, we can see first a graph showing the sales for each product and their contribution to the total sales via a Pareto line, this graph clearly shows that the best-sold products, particularly the first one, have a much higher contribution than the worst sold products.</p>
+								<p>And at the bottom, there is a line chart that allows us to quickly compare any product that we want and their performance against another or more, right now is showing the top seller and the worst seller up to the second quarter of 2015, but it can be changed as needed. Next to it, there is a table showing 
+									the top 5 best and worst sellers for this quarter, last quarter, and last year. This last table is key to comparing which products are becoming more relevant at the moment and to help select any of them for further analysis.</p>
+								<div class="image main"><img src="Recursos\Descriptive_analysis_toy_company\Excel_Dashboard_3.png" alt="" /></div>
+								<h2>Final thoughts:</h2>
+								<p>There are a couple of key things to take from the analysis, first, the trains product type should be exposed to further analysis that considers the cost of keeping that type of product in the market, in the same line of thought, the final graph line in dashboard 3 shows that a couple of products are performing particularly bad, the worst seller this quarter was not sold a single time, this group of worst performers deserves additional investigation that contemplates the cost of marketing and 
+									particularly the fixed and variable costs of production. Secondly, in the NA and EMEA territories, we have a client that has a way greater cut of the market than the rest and it should be considered for any plans for the region and for our relationship with them. Finally, even though every product is being sold since the first quarter of 2003 some of them have consistently better performance and it should be taken into account for marketing investment and the creation of future products.</p>
+							</section>
+					</div>
+
+				<!-- Footer -->
+					
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
